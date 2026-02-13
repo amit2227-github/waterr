@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>For Mahima ❤️</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{
+  font-family:'Segoe UI',cursive;
+  background:#000;
+  color:#fff;
+  overflow-x:hidden;
+  text-align:center;
+}
+
+/* Intro */
+#intro{
+  position:fixed;
+  inset:0;
+  background:radial-gradient(circle,#ff758c,#000);
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  z-index:999;
+}
+#intro h1{font-size:3.2rem;animation:pulse 2s infinite}
+#intro button{
+  margin-top:30px;
+  padding:15px 40px;
+  border:none;
+  border-radius:40px;
+  font-size:1.2rem;
+  background:#ff4d6d;
+  color:#fff;
+  cursor:pointer;
+}
+@keyframes pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.1)}}
+
+/* Stars (pure CSS, no external image) */
+.stars{
+  position:fixed;
+  inset:0;
+  background:
+    radial-gradient(1.5px 1.5px at 20% 30%, #fff, transparent 40%),
+    radial-gradient(1.5px 1.5px at 80% 20%, #fff, transparent 40%),
+    radial-gradient(1.5px 1.5px at 50% 70%, #fff, transparent 40%),
+    radial-gradient(1.5px 1.5px at 70% 80%, #fff, transparent 40%),
+    radial-gradient(1.5px 1.5px at 30% 60%, #fff, transparent 40%);
+  background-repeat:repeat;
+  background-size:200px 200px;
+  animation:moveStars 80s linear infinite;
+  z-index:-2;
+}
+
+@keyframes moveStars{
+  from{background-position:0 0}
+  to{background-position:-600px 1200px}
+}
+
+/* Hero */
+.hero{
+  min-height:100vh;
+  padding:40px 15px;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+}
+.hero h1{font-size:3.8rem;color:#ff9a9e}
+.hero p{font-size:1.5rem;margin-top:15px}
+
+/* Typing */
+#typing{margin-top:25px;font-size:1.4rem;color:#ffd6e0}
+
+/* Rose Petals */
+.petal{
+  position:fixed;
+  font-size:20px;
+  animation:petalFall 14s linear infinite;
+  pointer-events:none;
+  opacity:0.35;
+  z-index:-1;
+}
+@keyframes petalFall{
+  from{top:-30px;transform:translateX(0) rotate(0deg);opacity:1}
+  to{top:110vh;transform:translateX(80px) rotate(360deg);opacity:0}
+}
+
+/* Hearts */
+.heart{
+  position:fixed;
+  width:18px;
+  height:18px;
+  background:#ff4d6d;
+  transform:rotate(45deg);
+  animation:float 10s linear infinite;
+  opacity:0.25;
+  z-index:0;
+}
+
+.heart::before,
+.heart::after{
+  content:'';
+  position:absolute;
+  width:18px;
+  height:18px;
+  background:#ff4d6d;
+  border-radius:50%;
+}
+
+.heart::before{
+  top:-9px;
+  left:0;
+}
+
+.heart::after{
+  left:-9px;
+  top:0;
+}
+.heart:before,.heart:after{
+  content:'';
+  position:absolute;
+  width:18px;height:18px;
+  background:#ff4d6d;
+  border-radius:50%;
+}
+.heart:before{top:-9px}
+.heart:after{left:-9px}
+@keyframes float{
+  from{bottom:-40px;opacity:0.25}
+  to{bottom:110vh;opacity:0.25}
+}
+
+/* Sections */
+section{
+  padding:80px 16px;
+  text-align:center;
+  position:relative;
+  z-index:2;
+}
+.love-letter{
+  max-width:90%;
+  margin:auto;
+  background:rgba(255,255,255,0.12);
+  padding:28px 22px;
+  border-radius:22px;
+  font-size:1.15rem;
+  line-height:1.7;
+}
+
+.gallery{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(140px,1fr));
+  gap:16px;
+  max-width:100%;
+  margin:40px auto 0;
+}
+.gallery img{
+  width:100%;
+  aspect-ratio:1 / 1;
+  object-fit:cover;
+  border-radius:20px;
+  transition:transform .5s ease;
+}
+.gallery img:hover{transform:scale(1.08)}
+
+.final{
+  min-height:100vh;
+  padding:40px 15px;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+}
+.final h1{font-size:3.5rem;color:#ff9a9e}
+.final button{
+  margin-top:30px;
+  padding:15px 45px;
+  font-size:1.2rem;
+  border:none;
+  border-radius:40px;
+  background:#ff4d6d;
+  color:#fff;
+}
+
+/* Cutie bubbles */
+.cutie{
+  position:fixed;
+  padding:6px 12px;
+  background:rgba(255,182,193,0.9);
+  color:#000;
+  border-radius:20px;
+  font-size:0.9rem;
+  animation:pop 4s ease forwards;
+}
+@keyframes pop{
+  0%{transform:scale(0);opacity:0}
+  20%{transform:scale(1);opacity:1}
+  100%{transform:translateY(-120px);opacity:0}
+}
+
+/* Sparkles */
+.sparkle{
+  position:fixed;
+  width:6px;height:6px;
+  background:#fff;
+  border-radius:50%;
+  animation:twinkle 2s linear forwards;
+}
+@keyframes twinkle{from{opacity:1}to{opacity:0;transform:scale(2)}}
+
+/* Floating thoughts */
+.thought{
+  position:fixed;
+  font-size:1rem;
+  color:rgba(255,255,255,0.6);
+  animation:thoughtFloat 16s linear infinite;
+  pointer-events:none;
+  z-index:-1;
+}
+@keyframes thoughtFloat{
+  from{bottom:-40px;opacity:0}
+  20%{opacity:0.6}
+  to{bottom:110vh;opacity:0}
+}
+</style>
+</head>
+<body>
+
+<div id="intro">
+  <h1>Mahima ❤️</h1>
+  <p style="margin-top:15px">I made something only for you…</p>
+  <button id="openBtn">Open My Heart 💖</button>
+</div>
+
+<div class="stars"></div>
+
+<div class="hero">
+  <h1 style="font-size:clamp(2.2rem,6vw,3.8rem)">Happy Valentine’s Day</h1>
+  <p>My Love, My World, My Mahima</p>
+  <div id="typing"></div>
+</div>
+
+<section>
+  <h2>Some Thoughts From My Heart 💭❤️</h2>
+  <p style="font-size:1.25rem;max-width:800px;margin:30px auto;line-height:1.8">
+    Loving you means choosing you every day.<br>
+    In chaos, you are my calm.<br>
+    In silence, you are my comfort.<br>
+    And in every future I imagine… it’s always you.
+  </p>
+</section>
+
+<section>
+  <div class="love-letter">
+    Mahima,<br><br>
+    I don’t know how to put my feelings into words… but I know this:
+    loving you is the most beautiful thing that ever happened to me.
+    You are my peace, my excitement, my forever.
+    <br><br>
+    Every smile of yours is my favorite view ❤️
+  </div>
+</section>
+
+<section>
+  <h2>Our Memories 💞</h2>
+  <div class="gallery">
+    <img src="img1.jpeg" alt="Memory 1" />
+    <img src="img2.jpeg" alt="Memory 2" />
+    <img src="img3.jpeg" alt="Memory 3" />
+    <img src="img4.jpeg" alt="Memory 4" />
+  </div>
+</section>
+
+<section>
+  <h2>Flowers For You 🌸🌹</h2>
+  <p style="font-size:1.3rem;max-width:700px;margin:20px auto">If I could, I would give you every flower in the world… but this is my little garden just for you.</p>
+</section>
+
+<section>
+  <h2>Little Cute Things Just For You 🧸✨</h2>
+  
+  <p style="font-size:1.3rem;max-width:700px;margin:20px auto">Because sometimes love is not big words… it’s small cute moments 💕</p>
+  <button onclick="sendHug()" style="padding:14px 35px;border-radius:30px;border:none;background:#ffd6e0;color:#000;font-size:1.1rem;cursor:pointer">Send You a Hug 🤗</button>
+</section>
+
+<div class="final">
+  <h1 style="font-size:clamp(2.2rem,6vw,3.5rem)">I Love You Mahima ❤️</h1>
+  <p style="font-size:1.4rem;margin-top:15px">Today, Tomorrow, Always.</p>
+  <button onclick="alert('Forever Yours ❤️')">Always Yours 💍</button>
+  <p style="margin-top:40px;opacity:0.8;font-size:1.1rem">— yours 1129 ❤️</p>
+</div>
+
+<script>
+// Intro button
+document.getElementById('openBtn').addEventListener('click',()=>{
+  document.getElementById('intro').style.display='none';
+});
+
+// Typing effect
+const text="You are the reason my heart smiles…";
+let idx=0;
+setInterval(()=>{
+  if(idx<text.length){
+    document.getElementById('typing').innerHTML+=text.charAt(idx);
+    idx++;
+  }
+},100);
+
+// Hearts (soft but clearly visible, moving bottom to top)
+// Hearts (clearly visible, moving bottom to top)
+setInterval(()=>{
+  const h=document.createElement('div');
+  h.className='heart';
+  h.style.left=Math.random()*100+'vw';
+  document.body.appendChild(h);
+  setTimeout(()=>h.remove(),12000);
+},500);
+
+// Rose petals (gentle)
+const petals=['🌸','🌹','💮','🌺'];
+setInterval(()=>{
+  const p=document.createElement('div');
+  p.className='petal';
+  p.innerText=petals[Math.floor(Math.random()*petals.length)];
+  p.style.left=Math.random()*100+'vw';
+  p.style.animationDuration=(12+Math.random()*6)+'s';
+  document.body.appendChild(p);
+  setTimeout(()=>p.remove(),18000);
+},1200);
+
+// Floating good thoughts
+const thoughts=[
+  'You are enough 🤍',
+  'You make life beautiful ✨',
+  'My safe place 💕',
+  'Forever grateful for you 🌸',
+  'You are deeply loved ❤️'
+];
+setInterval(()=>{
+  const t=document.createElement('div');
+  t.className='thought';
+  t.innerText=thoughts[Math.floor(Math.random()*thoughts.length)];
+  t.style.left=Math.random()*70+'vw';
+  document.body.appendChild(t);
+  setTimeout(()=>t.remove(),18000);
+},8000);
+
+// Cute pop messages
+// Cute pop messages (slower + fewer)
+const cuteTexts=["Hehe 😊","Miss you 💗","Blush 🙈","Cute Mahima 🧸","My Sunshine ☀️"];
+setInterval(()=>{
+  const c=document.createElement('div');
+  c.className='cutie';
+  c.innerText=cuteTexts[Math.floor(Math.random()*cuteTexts.length)];
+  c.style.left=Math.random()*80+'vw';
+  c.style.bottom='20px';
+  document.body.appendChild(c);
+  setTimeout(()=>c.remove(),4000);
+},6000);
+
+// Sparkles on click (soft)
+document.addEventListener('click',(e)=>{
+  for(let i=0;i<3;i++){
+    const s=document.createElement('div');
+    s.className='sparkle';
+    s.style.left=e.clientX+Math.random()*10-5+'px';
+    s.style.top=e.clientY+Math.random()*10-5+'px';
+    document.body.appendChild(s);
+    setTimeout(()=>s.remove(),1500);
+  }
+});
+
+// Hug button
+function sendHug(){
+  const msgs=[
+    'Big warm hug just for you 🤗💖',
+    'Holding you tight 🫂💕',
+    'Baby this hug is infinite ♾️❤️',
+    'Come here, hug time 🤍'
+  ];
+  alert(msgs[Math.floor(Math.random()*msgs.length)]);
+}
+
+// Cute floating kiss
+setInterval(()=>{
+  const k=document.createElement('div');
+  k.innerText='💋';
+  k.style.position='fixed';
+  k.style.left=Math.random()*90+'vw';
+  k.style.bottom='0';
+  k.style.fontSize='22px';
+  k.style.animation='pop 5s ease forwards';
+  document.body.appendChild(k);
+  setTimeout(()=>k.remove(),5000);
+},4500);
+
+// Teddy peek
+setTimeout(()=>{
+  const t=document.createElement('div');
+  t.innerText='🧸 peek-a-boo';
+  t.style.position='fixed';
+  t.style.bottom='20px';
+  t.style.right='20px';
+  t.style.background='rgba(255,255,255,0.9)';
+  t.style.color='#000';
+  t.style.padding='10px 15px';
+  t.style.borderRadius='20px';
+  t.style.fontSize='0.9rem';
+  document.body.appendChild(t);
+  setTimeout(()=>t.remove(),6000);
+},8000);
+</script>
+</body>
+</html>
